@@ -1,0 +1,1041 @@
+node n0 {
+    type router
+    model quagga
+    network-config {
+	hostname router1
+	!
+	interface eth3
+	 ip address 10.0.19.2/24
+	 mac address 42:00:aa:00:00:27
+	!
+	interface eth2
+	 ip address 10.0.18.2/24
+	 mac address 42:00:aa:00:00:25
+	!
+	interface eth1
+	 ip address 10.0.17.2/24
+	 mac address 42:00:aa:00:00:23
+	!
+	interface eth0
+	 ip address 10.0.16.2/24
+	 mac address 42:00:aa:00:00:21
+	!
+	interface lo0
+	 type lo
+	 ip address 127.0.0.1/8
+	 ipv6 address ::1/128
+	!
+	router ospf
+	 redistribute static
+	 redistribute connected
+	 redistribute rip
+	 network 0.0.0.0/0 area 0.0.0.0
+	!
+    }
+    canvas c0
+    iconcoords {168 72}
+    labelcoords {168 97}
+    interface-peer {eth0 n4}
+    interface-peer {eth1 n8}
+    interface-peer {eth2 n12}
+    interface-peer {eth3 n16}
+}
+
+node n1 {
+    type router
+    model quagga
+    network-config {
+	hostname router2
+	!
+	interface eth3
+	 ip address 10.0.23.2/24
+	 mac address 42:00:aa:00:00:2f
+	!
+	interface eth2
+	 ip address 10.0.22.2/24
+	 mac address 42:00:aa:00:00:2d
+	!
+	interface eth1
+	 ip address 10.0.21.2/24
+	 mac address 42:00:aa:00:00:2b
+	!
+	interface eth0
+	 ip address 10.0.20.2/24
+	 mac address 42:00:aa:00:00:29
+	!
+	interface lo0
+	 type lo
+	 ip address 127.0.0.1/8
+	 ipv6 address ::1/128
+	!
+	router ospf
+	 redistribute static
+	 redistribute connected
+	 redistribute rip
+	 network 0.0.0.0/0 area 0.0.0.0
+	!
+    }
+    canvas c0
+    iconcoords {408 72}
+    labelcoords {408 97}
+    interface-peer {eth0 n4}
+    interface-peer {eth1 n8}
+    interface-peer {eth2 n12}
+    interface-peer {eth3 n16}
+}
+
+node n2 {
+    type router
+    model quagga
+    network-config {
+	hostname router3
+	!
+	interface eth3
+	 ip address 10.0.27.2/24
+	 mac address 42:00:aa:00:00:37
+	!
+	interface eth2
+	 ip address 10.0.26.2/24
+	 mac address 42:00:aa:00:00:35
+	!
+	interface eth1
+	 ip address 10.0.25.2/24
+	 mac address 42:00:aa:00:00:33
+	!
+	interface eth0
+	 ip address 10.0.24.2/24
+	 mac address 42:00:aa:00:00:31
+	!
+	interface lo0
+	 type lo
+	 ip address 127.0.0.1/8
+	 ipv6 address ::1/128
+	!
+	router ospf
+	 redistribute static
+	 redistribute connected
+	 redistribute rip
+	 network 0.0.0.0/0 area 0.0.0.0
+	!
+    }
+    canvas c0
+    iconcoords {576 72}
+    labelcoords {576 97}
+    interface-peer {eth0 n5}
+    interface-peer {eth1 n9}
+    interface-peer {eth2 n13}
+    interface-peer {eth3 n17}
+}
+
+node n3 {
+    type router
+    model quagga
+    network-config {
+	hostname router4
+	!
+	interface eth3
+	 ip address 10.0.31.2/24
+	 mac address 42:00:aa:00:00:3f
+	!
+	interface eth2
+	 ip address 10.0.30.2/24
+	 mac address 42:00:aa:00:00:3d
+	!
+	interface eth1
+	 ip address 10.0.29.2/24
+	 mac address 42:00:aa:00:00:3b
+	!
+	interface eth0
+	 ip address 10.0.28.2/24
+	 mac address 42:00:aa:00:00:39
+	!
+	interface lo0
+	 type lo
+	 ip address 127.0.0.1/8
+	 ipv6 address ::1/128
+	!
+	router ospf
+	 redistribute static
+	 redistribute connected
+	 redistribute rip
+	 network 0.0.0.0/0 area 0.0.0.0
+	!
+    }
+    canvas c0
+    iconcoords {816 72}
+    labelcoords {816 97}
+    interface-peer {eth0 n5}
+    interface-peer {eth1 n9}
+    interface-peer {eth2 n13}
+    interface-peer {eth3 n17}
+}
+
+node n4 {
+    type router
+    model quagga
+    network-config {
+	hostname router5
+	!
+	interface eth1
+	 ip address 10.0.1.1/24
+	 mac address 42:00:aa:00:00:01
+	!
+	interface eth0
+	 ip address 10.0.0.1/24
+	 mac address 42:00:aa:00:00:00
+	!
+	interface eth3
+	 ip address 10.0.20.1/24
+	 mac address 42:00:aa:00:00:28
+	!
+	interface eth2
+	 ip address 10.0.16.1/24
+	 mac address 42:00:aa:00:00:20
+	!
+	interface lo0
+	 type lo
+	 ip address 127.0.0.1/8
+	 ipv6 address ::1/128
+	!
+	router ospf
+	 redistribute static
+	 redistribute connected
+	 redistribute rip
+	 network 0.0.0.0/0 area 0.0.0.0
+	!
+    }
+    canvas c0
+    iconcoords {48 264}
+    labelcoords {48 289}
+    interface-peer {eth2 n0}
+    interface-peer {eth3 n1}
+    interface-peer {eth0 n7}
+    interface-peer {eth1 n6}
+}
+
+node n5 {
+    type router
+    model quagga
+    network-config {
+	hostname router6
+	!
+	interface eth1
+	 ip address 10.0.0.2/24
+	 mac address 42:00:aa:00:00:03
+	!
+	interface eth0
+	 ip address 10.0.1.2/24
+	 mac address 42:00:aa:00:00:02
+	!
+	interface eth3
+	 ip address 10.0.28.1/24
+	 mac address 42:00:aa:00:00:38
+	!
+	interface eth2
+	 ip address 10.0.24.1/24
+	 mac address 42:00:aa:00:00:30
+	!
+	interface lo0
+	 type lo
+	 ip address 127.0.0.1/8
+	 ipv6 address ::1/128
+	!
+	router ospf
+	 redistribute static
+	 redistribute connected
+	 redistribute rip
+	 network 0.0.0.0/0 area 0.0.0.0
+	!
+    }
+    canvas c0
+    iconcoords {168 264}
+    labelcoords {168 289}
+    interface-peer {eth2 n2}
+    interface-peer {eth3 n3}
+    interface-peer {eth0 n6}
+    interface-peer {eth1 n7}
+}
+
+node n8 {
+    type router
+    model quagga
+    network-config {
+	hostname router9
+	!
+	interface eth1
+	 ip address 10.0.3.1/24
+	 mac address 42:00:aa:00:00:05
+	!
+	interface eth0
+	 ip address 10.0.2.1/24
+	 mac address 42:00:aa:00:00:04
+	!
+	interface eth3
+	 ip address 10.0.21.1/24
+	 mac address 42:00:aa:00:00:2a
+	!
+	interface eth2
+	 ip address 10.0.17.1/24
+	 mac address 42:00:aa:00:00:22
+	!
+	interface lo0
+	 type lo
+	 ip address 127.0.0.1/8
+	 ipv6 address ::1/128
+	!
+	router ospf
+	 redistribute static
+	 redistribute connected
+	 redistribute rip
+	 network 0.0.0.0/0 area 0.0.0.0
+	!
+    }
+    canvas c0
+    iconcoords {288 264}
+    labelcoords {288 289}
+    interface-peer {eth2 n0}
+    interface-peer {eth3 n1}
+    interface-peer {eth0 n10}
+    interface-peer {eth1 n11}
+}
+
+node n9 {
+    type router
+    model quagga
+    network-config {
+	hostname router10
+	!
+	interface eth1
+	 ip address 10.0.3.2/24
+	 mac address 42:00:aa:00:00:07
+	!
+	interface eth0
+	 ip address 10.0.2.2/24
+	 mac address 42:00:aa:00:00:06
+	!
+	interface eth3
+	 ip address 10.0.29.1/24
+	 mac address 42:00:aa:00:00:3a
+	!
+	interface eth2
+	 ip address 10.0.25.1/24
+	 mac address 42:00:aa:00:00:32
+	!
+	interface lo0
+	 type lo
+	 ip address 127.0.0.1/8
+	 ipv6 address ::1/128
+	!
+	router ospf
+	 redistribute static
+	 redistribute connected
+	 redistribute rip
+	 network 0.0.0.0/0 area 0.0.0.0
+	!
+    }
+    canvas c0
+    iconcoords {408 264}
+    labelcoords {408 289}
+    interface-peer {eth2 n2}
+    interface-peer {eth3 n3}
+    interface-peer {eth0 n10}
+    interface-peer {eth1 n11}
+}
+
+node n12 {
+    type router
+    model quagga
+    network-config {
+	hostname router13
+	!
+	interface eth1
+	 ip address 10.0.5.1/24
+	 mac address 42:00:aa:00:00:09
+	!
+	interface eth0
+	 ip address 10.0.4.1/24
+	 mac address 42:00:aa:00:00:08
+	!
+	interface eth3
+	 ip address 10.0.22.1/24
+	 mac address 42:00:aa:00:00:2c
+	!
+	interface eth2
+	 ip address 10.0.18.1/24
+	 mac address 42:00:aa:00:00:24
+	!
+	interface lo0
+	 type lo
+	 ip address 127.0.0.1/8
+	 ipv6 address ::1/128
+	!
+	router ospf
+	 redistribute static
+	 redistribute connected
+	 redistribute rip
+	 network 0.0.0.0/0 area 0.0.0.0
+	!
+    }
+    canvas c0
+    iconcoords {504 264}
+    labelcoords {504 289}
+    interface-peer {eth2 n0}
+    interface-peer {eth3 n1}
+    interface-peer {eth0 n14}
+    interface-peer {eth1 n15}
+}
+
+node n13 {
+    type router
+    model quagga
+    network-config {
+	hostname router14
+	!
+	interface eth1
+	 ip address 10.0.5.2/24
+	 mac address 42:00:aa:00:00:0b
+	!
+	interface eth0
+	 ip address 10.0.4.2/24
+	 mac address 42:00:aa:00:00:0a
+	!
+	interface eth3
+	 ip address 10.0.30.1/24
+	 mac address 42:00:aa:00:00:3c
+	!
+	interface eth2
+	 ip address 10.0.26.1/24
+	 mac address 42:00:aa:00:00:34
+	!
+	interface lo0
+	 type lo
+	 ip address 127.0.0.1/8
+	 ipv6 address ::1/128
+	!
+	router ospf
+	 redistribute static
+	 redistribute connected
+	 redistribute rip
+	 network 0.0.0.0/0 area 0.0.0.0
+	!
+    }
+    canvas c0
+    iconcoords {624 264}
+    labelcoords {624 289}
+    interface-peer {eth2 n2}
+    interface-peer {eth3 n3}
+    interface-peer {eth0 n14}
+    interface-peer {eth1 n15}
+}
+
+node n16 {
+    type router
+    model quagga
+    network-config {
+	hostname router17
+	!
+	interface eth1
+	 ip address 10.0.7.1/24
+	 mac address 42:00:aa:00:00:0d
+	!
+	interface eth0
+	 ip address 10.0.6.1/24
+	 mac address 42:00:aa:00:00:0c
+	!
+	interface eth3
+	 ip address 10.0.23.1/24
+	 mac address 42:00:aa:00:00:2e
+	!
+	interface eth2
+	 ip address 10.0.19.1/24
+	 mac address 42:00:aa:00:00:26
+	!
+	interface lo0
+	 type lo
+	 ip address 127.0.0.1/8
+	 ipv6 address ::1/128
+	!
+	router ospf
+	 redistribute static
+	 redistribute connected
+	 redistribute rip
+	 network 0.0.0.0/0 area 0.0.0.0
+	!
+    }
+    canvas c0
+    iconcoords {744 264}
+    labelcoords {744 289}
+    interface-peer {eth2 n0}
+    interface-peer {eth3 n1}
+    interface-peer {eth0 n18}
+    interface-peer {eth1 n19}
+}
+
+node n17 {
+    type router
+    model quagga
+    network-config {
+	hostname router18
+	!
+	interface eth1
+	 ip address 10.0.7.2/24
+	 mac address 42:00:aa:00:00:0f
+	!
+	interface eth0
+	 ip address 10.0.6.2/24
+	 mac address 42:00:aa:00:00:0e
+	!
+	interface eth3
+	 ip address 10.0.31.1/24
+	 mac address 42:00:aa:00:00:3e
+	!
+	interface eth2
+	 ip address 10.0.27.1/24
+	 mac address 42:00:aa:00:00:36
+	!
+	interface lo0
+	 type lo
+	 ip address 127.0.0.1/8
+	 ipv6 address ::1/128
+	!
+	router ospf
+	 redistribute static
+	 redistribute connected
+	 redistribute rip
+	 network 0.0.0.0/0 area 0.0.0.0
+	!
+    }
+    canvas c0
+    iconcoords {864 264}
+    labelcoords {864 289}
+    interface-peer {eth2 n2}
+    interface-peer {eth3 n3}
+    interface-peer {eth0 n18}
+    interface-peer {eth1 n19}
+}
+
+node n6 {
+    type lanswitch
+    network-config {
+	hostname switch1
+	!
+    }
+    canvas c0
+    iconcoords {48 360}
+    labelcoords {48 383}
+    interface-peer {e0 n4}
+    interface-peer {e1 n5}
+    interface-peer {e2 n20}
+    interface-peer {e3 n21}
+}
+
+node n7 {
+    type lanswitch
+    network-config {
+	hostname switch2
+	!
+    }
+    canvas c0
+    iconcoords {168 360}
+    labelcoords {168 383}
+    interface-peer {e0 n4}
+    interface-peer {e1 n5}
+    interface-peer {e2 n22}
+}
+
+node n10 {
+    type lanswitch
+    network-config {
+	hostname switch3
+	!
+    }
+    canvas c0
+    iconcoords {288 360}
+    labelcoords {288 383}
+    interface-peer {e0 n8}
+    interface-peer {e1 n9}
+}
+
+node n11 {
+    type lanswitch
+    network-config {
+	hostname switch4
+	!
+    }
+    canvas c0
+    iconcoords {408 360}
+    labelcoords {408 383}
+    interface-peer {e0 n8}
+    interface-peer {e1 n9}
+    interface-peer {e2 n23}
+}
+
+node n14 {
+    type lanswitch
+    network-config {
+	hostname switch5
+	!
+    }
+    canvas c0
+    iconcoords {504 360}
+    labelcoords {504 383}
+    interface-peer {e0 n12}
+    interface-peer {e1 n13}
+    interface-peer {e2 n24}
+}
+
+node n15 {
+    type lanswitch
+    network-config {
+	hostname switch6
+	!
+    }
+    canvas c0
+    iconcoords {624 360}
+    labelcoords {624 383}
+    interface-peer {e0 n12}
+    interface-peer {e1 n13}
+}
+
+node n18 {
+    type lanswitch
+    network-config {
+	hostname switch7
+	!
+    }
+    canvas c0
+    iconcoords {744 360}
+    labelcoords {744 383}
+    interface-peer {e0 n16}
+    interface-peer {e1 n17}
+    interface-peer {e2 n25}
+}
+
+node n19 {
+    type lanswitch
+    network-config {
+	hostname switch8
+	!
+    }
+    canvas c0
+    iconcoords {864 360}
+    labelcoords {864 383}
+    interface-peer {e0 n16}
+    interface-peer {e1 n17}
+    interface-peer {e2 n26}
+}
+
+node n20 {
+    type host
+    network-config {
+	hostname host1
+	!
+	interface eth0
+	 ip address 10.0.1.10/24
+	 mac address 42:00:aa:00:00:10
+	!
+	interface lo0
+	 type lo
+	 ip address 127.0.0.1/8
+	 ipv6 address ::1/128
+	!
+	ip route 0.0.0.0/0 10.0.1.1
+	!
+    }
+    canvas c0
+    iconcoords {24 504}
+    labelcoords {24 540}
+    interface-peer {eth0 n6}
+}
+
+node n21 {
+    type host
+    network-config {
+	hostname host2
+	!
+	interface eth0
+	 ip address 10.0.1.11/24
+	 mac address 42:00:aa:00:00:11
+	!
+	interface lo0
+	 type lo
+	 ip address 127.0.0.1/8
+	 ipv6 address ::1/128
+	!
+	ip route 0.0.0.0/0 10.0.1.1
+	!
+    }
+    canvas c0
+    iconcoords {96 504}
+    labelcoords {96 540}
+    interface-peer {eth0 n6}
+}
+
+node n22 {
+    type host
+    network-config {
+	hostname host3
+	!
+	interface eth0
+	 ip address 10.0.0.10/24
+	 mac address 42:00:aa:00:00:12
+	!
+	interface lo0
+	 type lo
+	 ip address 127.0.0.1/8
+	 ipv6 address ::1/128
+	!
+	ip route 0.0.0.0/0 10.0.0.1
+	!
+    }
+    canvas c0
+    iconcoords {216 504}
+    labelcoords {216 540}
+    interface-peer {eth0 n7}
+}
+
+node n23 {
+    type host
+    network-config {
+	hostname host4
+	!
+	interface eth0
+	 ip address 10.0.3.10/24
+	 mac address 42:00:aa:00:00:13
+	!
+	interface lo0
+	 type lo
+	 ip address 127.0.0.1/8
+	 ipv6 address ::1/128
+	!
+	ip route 0.0.0.0/0 10.0.3.1
+	!
+    }
+    canvas c0
+    iconcoords {408 504}
+    labelcoords {408 540}
+    interface-peer {eth0 n11}
+}
+
+node n24 {
+    type host
+    network-config {
+	hostname host5
+	!
+	interface eth0
+	 ip address 10.0.4.10/24
+	 mac address 42:00:aa:00:00:14
+	!
+	interface lo0
+	 type lo
+	 ip address 127.0.0.1/8
+	 ipv6 address ::1/128
+	!
+	ip route 0.0.0.0/0 10.0.4.1
+	!
+    }
+    canvas c0
+    iconcoords {504 504}
+    labelcoords {504 540}
+    interface-peer {eth0 n14}
+}
+
+node n25 {
+    type host
+    network-config {
+	hostname host6
+	!
+	interface eth0
+	 ip address 10.0.6.10/24
+	 mac address 42:00:aa:00:00:15
+	!
+	interface lo0
+	 type lo
+	 ip address 127.0.0.1/8
+	 ipv6 address ::1/128
+	!
+	ip route 0.0.0.0/0 10.0.6.1
+	!
+    }
+    canvas c0
+    iconcoords {744 504}
+    labelcoords {744 540}
+    interface-peer {eth0 n18}
+}
+
+node n26 {
+    type host
+    network-config {
+	hostname host7
+	!
+	interface eth0
+	 ip address 10.0.7.10/24
+	 mac address 42:00:aa:00:00:16
+	!
+	interface lo0
+	 type lo
+	 ip address 127.0.0.1/8
+	 ipv6 address ::1/128
+	!
+	ip route 0.0.0.0/0 10.0.7.1
+	!
+    }
+    canvas c0
+    iconcoords {864 504}
+    labelcoords {864 540}
+    interface-peer {eth0 n19}
+}
+
+link l16 {
+    nodes {n4 n0}
+    bandwidth 0
+}
+
+link l17 {
+    nodes {n8 n0}
+    bandwidth 0
+}
+
+link l18 {
+    nodes {n12 n0}
+    bandwidth 0
+}
+
+link l19 {
+    nodes {n16 n0}
+    bandwidth 0
+}
+
+link l20 {
+    nodes {n4 n1}
+    bandwidth 0
+}
+
+link l21 {
+    nodes {n8 n1}
+    bandwidth 0
+}
+
+link l22 {
+    nodes {n12 n1}
+    bandwidth 0
+}
+
+link l23 {
+    nodes {n16 n1}
+    bandwidth 0
+}
+
+link l24 {
+    nodes {n5 n2}
+    bandwidth 0
+}
+
+link l25 {
+    nodes {n9 n2}
+    bandwidth 0
+}
+
+link l26 {
+    nodes {n13 n2}
+    bandwidth 0
+}
+
+link l27 {
+    nodes {n17 n2}
+    bandwidth 0
+}
+
+link l28 {
+    nodes {n5 n3}
+    bandwidth 0
+}
+
+link l29 {
+    nodes {n9 n3}
+    bandwidth 0
+}
+
+link l30 {
+    nodes {n13 n3}
+    bandwidth 0
+}
+
+link l31 {
+    nodes {n17 n3}
+    bandwidth 0
+}
+
+link l0 {
+    nodes {n7 n4}
+    bandwidth 0
+}
+
+link l1 {
+    nodes {n6 n4}
+    bandwidth 0
+}
+
+link l2 {
+    nodes {n6 n5}
+    bandwidth 0
+}
+
+link l3 {
+    nodes {n7 n5}
+    bandwidth 0
+}
+
+link l4 {
+    nodes {n10 n8}
+    bandwidth 0
+}
+
+link l5 {
+    nodes {n11 n8}
+    bandwidth 0
+}
+
+link l6 {
+    nodes {n10 n9}
+    bandwidth 0
+}
+
+link l7 {
+    nodes {n11 n9}
+    bandwidth 0
+}
+
+link l8 {
+    nodes {n14 n12}
+    bandwidth 0
+}
+
+link l9 {
+    nodes {n15 n12}
+    bandwidth 0
+}
+
+link l10 {
+    nodes {n14 n13}
+    bandwidth 0
+}
+
+link l11 {
+    nodes {n15 n13}
+    bandwidth 0
+}
+
+link l12 {
+    nodes {n18 n16}
+    bandwidth 0
+}
+
+link l13 {
+    nodes {n19 n16}
+    bandwidth 0
+}
+
+link l14 {
+    nodes {n18 n17}
+    bandwidth 0
+}
+
+link l15 {
+    nodes {n19 n17}
+    bandwidth 0
+}
+
+link l32 {
+    nodes {n20 n6}
+    bandwidth 0
+}
+
+link l33 {
+    nodes {n21 n6}
+    bandwidth 0
+}
+
+link l34 {
+    nodes {n22 n7}
+    bandwidth 0
+}
+
+link l35 {
+    nodes {n23 n11}
+    bandwidth 0
+}
+
+link l36 {
+    nodes {n14 n24}
+    bandwidth 0
+}
+
+link l37 {
+    nodes {n25 n18}
+    bandwidth 0
+}
+
+link l38 {
+    nodes {n26 n19}
+    bandwidth 0
+}
+
+annotation a0 {
+    type rectangle
+    iconcoords {693 224 897 418}
+    color #aaaaaa
+    bordercolor black
+    width 1
+    rad 25
+    canvas c0
+}
+
+annotation a1 {
+    type rectangle
+    iconcoords {13 223 217 417}
+    color #aaaaaa
+    bordercolor black
+    width 1
+    rad 25
+    canvas c0
+}
+
+annotation a2 {
+    type rectangle
+    iconcoords {245 224 449 418}
+    color #aaaaaa
+    bordercolor black
+    width 1
+    rad 25
+    canvas c0
+}
+
+annotation a3 {
+    type rectangle
+    iconcoords {467 224 671 418}
+    color #aaaaaa
+    bordercolor black
+    width 1
+    rad 25
+    canvas c0
+}
+
+canvas c0 {
+    name {Canvas0}
+}
+
+option show {
+    interface_names yes
+    ip_addresses yes
+    ipv6_addresses yes
+    node_labels yes
+    link_labels yes
+    background_images no
+    annotations yes
+    hostsAutoAssign no
+    grid yes
+    iconSize normal
+    zoom 1.25
+}
+
